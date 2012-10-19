@@ -16,7 +16,18 @@
   <meta name="viewport" content="width=1274, user-scalable=no">
   <link rel="stylesheet" href="themes/mozilla/styles/style.css">
   <style type="text/css">
-    /* Add your own styles here */
+      .small {
+          font-size: 20px;
+      }
+      ul.inner li::before {
+          content:'\2022';
+      }
+      .inner li {
+          opacity: 0;
+      }
+      .spacer {
+          margin-top:50px;
+      }
   </style>
 </head>
 <body class="list">
@@ -51,7 +62,12 @@
       <header>
         <h2>Problem statement</h2>
       </header>
-      <div>Firefox for Android and Firefox OS are not served or cannot make use of the same mobile content that is served to Android and iPhone browsers</div>
+      <div>The content served to Firefox for Android and Firefox OS</div>
+      <ul class="inner">
+        <li class="active">is not directly under Mozilla's control</li>
+        <li class="active">has a direct impact on the user experience of these products</li>
+        <li class="spacer">is Webkit based - works well in Safari and Chrome</li>
+      </ul>
       <footer class="notes">
       </footer>
     </section>
@@ -60,7 +76,7 @@
   <div id="issues" class="slide"><div>
     <section>
       <header>
-        <h2>4 issues</h2>
+        <h2>Mitigating the 4 issues</h2>
       </header>
       <ol>
         <li>User Agent (UA) sniffing</li>
@@ -80,6 +96,7 @@
       </header>
       <ul>
         <li>Firefox OS domain whitelist</li>
+        <li>promote feature detection</li>
       </ul> 
       <footer class="notes">
       </footer>
@@ -92,9 +109,39 @@
         <h2>2. Webkit specific CSS</h2>
       </header>
       <ul>
-        <li>CSS unprefixing</li>
+        <li>
+          CSS unprefixing
+          <ul class="inline small">
+            <li>animation</li>
+            <li>animation-name</li>
+            <li>animation-duration</li>
+            <li>animation-delay</li>
+            <li>animation-timing-function</li>
+            <li>animation-iteration-count</li>
+            <li>animation-direction</li>
+            <li>animation-play-state</li>
+            <li>animation-fill-mode</li>
+            <li>@keyframes</li>
+            <li>transition</li>
+            <li>transition-property</li>
+            <li>transition-delay</li>
+            <li>transition-duration</li>
+            <li>transition-timing-function</li>
+            <li>transform</li>
+            <li>transform-origin</li>
+            <li>transform-style</li>
+            <li>backface-visibility</li>
+            <li>perspective</li>
+            <li>perspective-origin</li>
+            <li>linear-gradient()</li>
+            <li>radial-gradient()</li>
+            <li>repeating-linear-gradient()</li>
+            <li>repeating-linear-gradient()</li>
+            <li>calc()</li>
+          </ul>
+        </li>
         <li>Webkit CSS aliasing analysis</li>
-      </ul> 
+      </ul>
       <footer class="notes">
       </footer>
     </section>
@@ -123,6 +170,7 @@
       <ul>
         <li>layout performance issues</li>
         <li>getUserMedia()</li>
+        <li>H.264 Advanced Video Coding (AVC) profile support</li>
         <li>other...</li>
       </ul>
       <footer class="notes">
@@ -218,7 +266,7 @@
       </header>
       <img src="pictures/smartphone-large.png" class="right"
            alt="Firefox for Android">
-      <p>Tomorrow (Tues) 12pm PT in Holodeck</p>
+      <p>Tomorrow (Tues) 12pm PT in 10 forward</p>
       <p>Come test, report bugs, and have lunch!</p>
       <footer class="notes">
       </footer>
